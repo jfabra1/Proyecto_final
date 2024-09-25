@@ -1,0 +1,54 @@
+.home {
+    background-color: rgb(243, 243, 243);
+    width: 99%;
+    height: 98%;
+    font-family: Nunito;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.sidebar {
+    width: 16%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+.sidebar1 {
+    width: 100%;
+    height: 100%;
+}
+
+.contenido {
+    width: 83%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.navbar {
+    margin-top: 1%;
+    width: 100%;
+    border-radius: 5px;
+    height: 9%;
+    background-color: rgb(255, 255, 255);
+}
+
+.main {
+    padding: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    width: 100%;
+    height: 79%;
+    background-color: rgb(255, 255, 255);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.footer {
+    width: 100%;
+    border-radius: 5px;
+    height: 8%;
+    background-color: rgb(255, 255, 255);
+}
+

@@ -1,0 +1,9 @@
+.home {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(243, 243, 243);
+    width: 100%;
+    height: 100%; /* Utiliza viewport height para asegurar la cobertura completa de la pantalla */
+    display: flex; /* Asegura que los hijos se distribuyan correctamente */
+    flex-direction: column; /* Direcciona los elementos de forma vertical */
+}

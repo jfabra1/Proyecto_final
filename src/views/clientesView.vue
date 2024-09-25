@@ -1,0 +1,105 @@
+<template>
+  <div class="contenedor">
+    <div class="card">
+      <div class="card-header">
+        <div class="row mt-1">
+          <div class="col-md-3">
+            <filterTableRol />
+          </div>
+          <div class="col-md-3">
+            <filterTableEstado />
+          </div>
+          <div class="col-md-3"></div>
+          <div class="col-md-3">
+            <filterTableCustomers />
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-md-8">
+            <h5>Clientes Registrados</h5>
+          </div>
+          <div class="col-md-4">
+            <createCustomersButton />
+            <exportOptions />
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <baseTable :data="clientes" :headers="headers" />
+      </div>
+      <div class="card-footer">
+        <div class="row">
+          <div class="col-md-3 align-content-center">
+            <numberRegisterTable />
+          </div>
+          <div class="col-md-2 align-content-center">
+            <selectDataTable />
+          </div>
+          <div class="col-md-7 align-content-center">
+            <paginatorTable />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+<script setup>
+
+//Importar UI elements
+import ui from "../utils/importUI.js";
+const {
+  baseTable,
+  filterTableRol,
+  filterTableEstado,
+  numberRegisterTable,
+  filterTableCustomers,
+  paginatorTable,
+  selectDataTable,
+  createCustomersButton,
+  exportOptions,
+} = ui;
+
+//Data
+const clientes = [
+  {
+    id: 1,
+    nombre: "Juan",
+    apellido: "Perez",
+    email: "jperez@example.com",
+    rol: "Administrador",
+    estado: "Activo",
+  },
+  {
+    id: 2,
+    nombre: "Maria",
+    apellido: "Garcia",
+    email: "mgarcia@example.com",
+    rol: "Usuario",
+    estado: "Inactivo",
+  },
+  {
+    id: 3,
+    nombre: "Pedro",
+    apellido: "Lopez",
+    email: "plopez@example.com",
+    rol: "Usuario",
+    estado: "Activo",
+  },
+  //... more records...
+];
+
+//Headers
+const headers = [
+  { text: "ID", value: "id" },
+  { text: "Nombre", value: "nombre" },
+  { text: "Apellido", value: "apellido" },
+  { text: "Email", value: "email" },
+  { text: "Rol", value: "rol" },
+  { text: "Estado", value: "estado" },
+];
+
+</script>
+<style lang="scss" scoped>
+@import "../assets/styles/scss/clientes/clientes";
+</style>

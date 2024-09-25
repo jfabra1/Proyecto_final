@@ -1,0 +1,53 @@
+# Dependencias de Node.js
+/node_modules/
+/dist/
+/npm-debug.log*
+/yarn-debug.log*
+/yarn-error.log*
+/pnpm-debug.log*
+/package-lock.json
+/yarn.lock
+/pnpm-lock.yaml
+
+# Directorios de salida de producción
+/dist/
+/build/
+/.out/
+
+# Archivos relacionados con el entorno
+.env
+.env.local
+.env.*.local
+.vscode/
+.idea/
+
+# Cache
+/.nuxt
+/.next
+/.cache
+/.vuepress/.temp
+/.vuepress/.cache
+
+# Archivos relacionados con la base de datos de algunos editores de texto
+.DS_Store
+Thumbs.db
+
+# Logs
+/logs
+*.log
+
+# Otros
+/public/hot
+/storage/*.key
+/.env
+/.env.backup
+
+# Directorios de ejecución de pruebas
+/coverage
+/test-reports
+/junit.xml
+
+# Archivos generados por el servicio de hospedaje
+/.vercel
+/.now
+/netlify
