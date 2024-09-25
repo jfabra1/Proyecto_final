@@ -5,7 +5,7 @@
     </div>
     <div class="modulos p-3">
       <div class="submodulos">
-        <p><i class="fa-solid fa-utensils"></i> <span class="texto-modulos">Restaurantes</span></p>
+        <p @click="$router.push({name: 'restaurantes'})"><i class="fa-solid fa-utensils"></i> <span class="texto-modulos">Restaurantes</span></p>
         <p><i class="fa-solid fa-champagne-glasses"></i> <span class="texto-modulos">Discotecas</span></p>
         <p><i class="fa-solid fa-beer-mug-empty"></i> <span class="texto-modulos">Bares</span></p>
         <p><i class="fa-solid fa-dumbbell"></i> <span class="texto-modulos">Gym</span></p>
@@ -16,7 +16,13 @@
     </div>
   </div>
 </template>
-<script setup></script>
+<script setup>
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
+
+
+</script>
 <style lang="scss">
 @import "../../assets/styles/scss/layouts/sidebars";
 </style>
