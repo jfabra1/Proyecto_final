@@ -2,7 +2,7 @@
     <div class="container">
         <footer>
             <div class="foot">
-                <span><strong>COPYRIGHT {{year}} PARAMETRA 360. Todos los derechos reservados</strong></span>
+                <span><strong>COPYRIGHT {{year}} MonteriaGo. Todos los derechos reservados</strong></span>
             </div>
         </footer>
     </div>
