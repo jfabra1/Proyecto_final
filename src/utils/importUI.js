@@ -1,4 +1,4 @@
-import baseTable from '../components/ui/tables/baseTabla.vue';
+import baseTable from '../components/ui/tables/baseCard.vue';
 import filterTableRol from '../components/ui/tables/filterTableRol.vue';
 import filterTableEstado from '../components/ui/tables/filterTableStatus.vue';
 import numberRegisterTable from '../components/ui/tables/numberRegisterTable.vue';

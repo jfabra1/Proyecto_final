@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import HomeView from "../views/homeView.vue";
 
 import AuthRouter from "./auth.js"
-import ClientesRouter from "./clientes.js";
+import RestauranteRouter from "./Restaurante.js";
 
 const routes = [
   ...AuthRouter,
@@ -12,14 +12,13 @@ const routes = [
     component: HomeView,
   },
   {
-    path: "/clientes",
-    name: "clientes",
-    redirect: "/clientes/listar_clientes",
+    path: "/restaurantes",
+    name: "restaurantes",
+    redirect: "/restaurantes/listar_restaurantes",
     component: HomeView,
-    meta: { title: "Clientes",},
-    children: [...ClientesRouter],
+    meta: { title: "Restaurantes" },
+    children: [...RestauranteRouter],
   },
-
 ];
 
 const router = createRouter({

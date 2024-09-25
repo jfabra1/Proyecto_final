@@ -1,4 +1,4 @@
 <template>
-  <h6>Mostrando 2 de 2 clientes</h6>
+  <h6>Mostrando 3 de 3 Restaurantes</h6>
 </template>
 <script setup></script>

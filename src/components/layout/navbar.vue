@@ -15,18 +15,18 @@
         <ul class="dropdown-menu dropdown-menu-end text-small">
           <li>
             <a class="dropdown-item" href="#">
-              <i class="fa-regular fa-user"></i> David Sanabria</a
+              <i class="fa-regular fa-user"></i> Jairo Fabra</a
             >
           </li>
           <li>
             <a class="dropdown-item" href="#">
               <i class="fa-regular fa-address-card"></i> Ingeniero de
-              Sistemas</a
+              Software</a
             >
           </li>
           <li>
             <a class="dropdown-item" href="#">
-              <i class="fa-regular fa-building"></i> PYCODE-TEAM</a
+              <i class="fa-regular fa-building"></i> Usuario</a
             >
           </li>
           <li><hr class="dropdown-divider" /></li>
@@ -49,18 +49,18 @@
         <ul class="dropdown-menu dropdown-menu-end text-small">
           <li>
             <a class="dropdown-item" href="#">
-              <i class="fa-regular fa-user"></i> David Sanabria</a
+              <i class="fa-regular fa-user"></i> Jairo Fabra</a
             >
           </li>
           <li>
             <a class="dropdown-item" href="#">
               <i class="fa-regular fa-address-card"></i> Ingeniero de
-              Sistemas</a
+              Software</a
             >
           </li>
           <li>
             <a class="dropdown-item" href="#">
-              <i class="fa-regular fa-building"></i> PYCODE-TEAM</a
+              <i class="fa-regular fa-building"></i> Usuario</a
             >
           </li>
           <li><hr class="dropdown-divider" /></li>

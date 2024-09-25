@@ -30,7 +30,7 @@
               ¿Ya tienes una cuenta? <a href="#" class="link-signup">Inicia Sesión</a>
             </div>
             <div class="text-center cont-imagen">
-              <img src="@img/images/parametra1.png" class="imagen"></img>
+              <img src="@img/images/monteriago1.jpeg" class="imagen"></img>
             </div>
           </form>
       </div>

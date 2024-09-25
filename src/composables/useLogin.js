@@ -1,12 +1,14 @@
 // /src/composables/useLogin.js
 import { ref, inject } from "vue";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "vue-router";
 
 export function useLogin() {
   const auth = inject("auth");
   const email = ref("");
   const password = ref("");
   const errorMessage = ref("");
+  const router = useRouter();
 
     const errorMessages = {
     'auth/invalid-email': 'El correo electrónico no es válido.',
@@ -27,7 +29,8 @@ export function useLogin() {
       const user = userCredential.user;
       const idToken = await user.getIdToken();
       console.log("ID Token:", idToken);
-      // Aquí puedes enviar el token al backend si es necesario
+       router.push({ name: "home" });
+      
     } catch (error) {
       errorMessage.value =
         errorMessages[error.code] || errorMessages["default"];
