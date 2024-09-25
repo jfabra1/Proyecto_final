@@ -9,7 +9,7 @@
             <div class="col-9 contenido">
                 <span class="navbar">
                     <Navbar />
-                </span>\
+                </span>
                 <span class="main">
                     <router-view />
                 </span>
