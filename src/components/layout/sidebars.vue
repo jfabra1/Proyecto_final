@@ -1,7 +1,7 @@
 <template>
   <div class="side">
     <div class="logo">
-      <img src="@img/images/monteriago1.jpeg" class="img-logo" />
+      <img src="@img/images/monteriago1.jpeg" class="img-logo" @click="$router.push({name: 'inicio'})" cursor: pointer/>
     </div>
     <div class="modulos p-3">
       <div class="submodulos">

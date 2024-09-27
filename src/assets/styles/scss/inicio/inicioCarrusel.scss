@@ -1,0 +1,40 @@
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.carousel-caption h5 {
+  font-size: 2.5em;
+}
+
+.carousel-caption p {
+  font-size: 1.5em;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: black;
+}
+
+.carousel-control-prev-icon::before,
+.carousel-control-next-icon::before {
+  color: white;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  width: 30px;
+  height: 30px;
+}

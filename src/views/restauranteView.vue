@@ -50,8 +50,6 @@ const {
   filterTableEstado,
   numberRegisterTable,
   filterTableCustomers,
-  paginatorTable,
-  selectDataTable,
 } = ui;
 
 
