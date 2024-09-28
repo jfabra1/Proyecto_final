@@ -29,7 +29,7 @@ export function useLogin() {
       const user = userCredential.user;
       const idToken = await user.getIdToken();
       console.log("ID Token:", idToken);
-       router.push({ name: "home" });
+       router.push({ name: "inicio" });
       
     } catch (error) {
       errorMessage.value =

@@ -26,3 +26,11 @@
 .card:hover .overlay {
   opacity: 1;
 }
+
+button.btn {
+  transition: transform 0.2s ease;
+}
+
+button.btn:hover {
+  transform: scale(1.1);
+}

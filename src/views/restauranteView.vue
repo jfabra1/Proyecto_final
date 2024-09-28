@@ -22,28 +22,31 @@
         </div>
       </div>
       <div class="card-body">
-        <baseTable :headers="headers" />
+        <!-- Mostrar el spinner si loading es verdadero -->
+        <div v-if="loading" class="text-center">
+          <div class="spinner-border" role="status">
+            <span class="visually-hidden">Cargando...</span>
+          </div>
+        </div>
+        <!-- Mostrar la tabla solo si no está cargando -->
+        <baseTable v-else :data="userData" />
       </div>
       <div class="card-footer">
         <div class="row">
           <div class="col-md-3 align-content-center">
             <numberRegisterTable />
           </div>
-          <div class="col-md-2 align-content-center">
-            <selectDataTable />
-          </div>
-          <div class="col-md-7 align-content-center">
-            <paginatorTable />
-          </div>
         </div>
       </div>
     </div>
   </div>
 </template>
-<script setup>
 
-//Importar UI elements
+<script setup>
 import ui from "../utils/importUI.js";
+import { ref, inject } from 'vue';
+import { getDataFromFirestore } from '../composables/scripConsulta.js';
+
 const {
   baseTable,
   filterTableRol,
@@ -52,8 +55,21 @@ const {
   filterTableCustomers,
 } = ui;
 
+// Inyecta Firestore (db) proporcionado desde main.js
+const db = inject('db');
+let collection = 'restaurantes';
+
+// Variables reactivas para almacenar los datos y el estado de carga
+const userData = ref([]);
+const loading = ref(true); 
+
+(async () => {
+  userData.value = await getDataFromFirestore(collection, db);
+  loading.value = false; // Cambia a false cuando los datos se hayan cargado
+})();
 
 </script>
+
 <style lang="scss" scoped>
 @import "../assets/styles/scss/card/cardBase.scss";
 </style>

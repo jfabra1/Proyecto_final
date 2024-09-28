@@ -3,10 +3,11 @@ import { createApp } from "vue";
 import App from "./App.vue";
 import router from "./router"; // Asegúrate de que la ruta sea correcta
 import { initializeApp } from "firebase/app";
-import { getAuth } from "firebase/auth";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getFirestore } from "firebase/firestore";
 
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/js/bootstrap.bundle.min";
+import "bootstrap/dist/js/bootstrap.bundle.min.js";
 
 import VueSweetalert2 from 'vue-sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
@@ -23,12 +24,21 @@ const firebaseConfig = {
 
 
 // Inicializa Firebase
-initializeApp(firebaseConfig);
+const firebaseApp = initializeApp(firebaseConfig);
 
 // Inicializa Firebase Auth
 const auth = getAuth();
+onAuthStateChanged(auth, (user) => {
+  if (user) {
+    console.log("Usuario logueado:", user.email);
+  } else {
+    console.log("No hay usuario logueado.");
+  }
+});
+const db = getFirestore(firebaseApp);
 
 const app = createApp(App);
+
 
 app.use(router); // Usa el router en la instancia de la aplicación
 
@@ -36,5 +46,6 @@ app.use(VueSweetalert2);
 
 // Proporciona `auth` globalmente a todos los componentes
 app.provide('auth', auth);
+app.provide('db', db);  // Provee Firestore
 
 app.mount("#app");
